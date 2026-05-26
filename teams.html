@@ -1,0 +1,250 @@
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="css/all.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/materialize.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Teams</title>
+</head>
+
+<body class="grey lighten-3">
+
+   <!-- Barra de Navegacion -->
+   <div class="navbar-fixed">
+    <nav class="z-frpth-0">
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="index.html" class="brand-logo">
+                    <img class="responsive-img" src="img/encabezado2.png">
+                </a>
+                <a href="#" data-target="mobile-nav" 
+                class="sidenav-trigger">
+                <i class="material-icons prefix">menu</i>></a>
+                <ul class="right hide-on-med-and-down">
+                    <li>
+                        <a href="index.html" class="white-text" data-target="modal-account">Inicio</a>
+                    </li>
+                    <li class="form admin">
+                        <a href="formulario.html" class="white-text">Formulario</a>
+                    </li>
+                    <li class="sugerencias admin">
+                        <a href="sugerencias.html" class="white-text">Sugerencias</a>
+                    </li>
+                    <li class="logged-in">
+                        <a href="#" class="white-text modal-trigger" data-target="modal-account">Cuenta</a>
+                    </li>
+                    <li class="logged-in">
+                        <a href="#" class="white-text" id="logout-nav">Cerrar Sesi&oacute;n</a>
+                    </li>
+                    <li class="logged-out">
+                        <a href="#" class="white-text modal-trigger" data-target="modal-login">Iniciar Sesi&oacute;n</a>
+                    </li>
+                    <li class="logged-out">
+                        <a href="#" class="white-text modal-trigger" data-target="modal-signup">Registrarse</a>
+                    </li>               
+                </ul>
+            </div>
+        </div>
+    </nav>
+</div>
+    <ul class="sidenav" id="mobile-nav">
+        <li>
+            <a href="index.html" class="grey-text" data-target="modal-account">Inicio</a>
+        </li>
+        <li class="form admin">
+            <a href="formulario.html" class="grey-text" data-target="modal-account">Formulario</a>
+        </li>
+        <li class="sugerencias admin">
+            <a href="sugerencias.html" class="grey-text" data-target="modal-account">Sugerencias</a>
+        </li>
+        <li class="logged-in">
+            <a href="#" class="grey-text modal-trigger" data-target="modal-account">Cuenta</a>
+        </li>
+        <li class="logged-in">
+            <a href="#" class="grey-text" id="logout-mobile">Cerrar Sesi&oacute;n</a>
+        </li>
+        <li class="logged-out">
+            <a href="#" class="grey-text modal-trigger" data-target="modal-login">Iniciar Sesi&oacute;n</a>
+        </li>
+        <li class="logged-out">
+            <a href="#" class="grey-text modal-trigger" data-target="modal-signup">Registrarse</a>
+        </li>               
+    </ul>   
+    <!-- Barra de Navegacion -->
+
+    <!-- Registro -->
+    <div id="modal-signup" class="modal">
+        <div class="modal-content">
+            <h4>Registrate</h4>
+            <form id="signup-form" autocomplete="off">
+                <div class="input-field">
+                    <input type="text" id="signup-name" required />
+                    <label for="signup-name">Nombre</label>
+                </div>
+                <div class="input-field">
+                    <input type="text" id="signup-lastname" required />
+                    <label for="signup-lastname">Apellidos</label>
+                </div>
+                <p>
+                    <label>
+                      <input class="with-gap" name="ocuppation" type="radio" value="Docente" checked/>
+                      <span>Docente</span>
+                    </label>
+                    <label>
+                        <input class="with-gap" name="ocuppation" type="radio" value="Alumno" />
+                        <span>Alumno</span>
+                    </label>
+                    <label>
+                        <input class="with-gap" name="ocuppation" type="radio" value="Otro" />
+                        <span>Otro</span>
+                    </label>
+                  </p>
+                <div class="input-field">
+                    <input type="text" id="signup-school" required />
+                    <label for="signup-school">Institucion (Opcional)</label>
+                </div>
+                <div class="input-field">
+                    <input type="email" id="signup-email" required />
+                    <label for="signup-email">Correo electronico</label>
+                </div>
+                <div class="input-field">
+                    <input type="password" id="signup-password" required />
+                    <label for="signup-password">Contraseña</label>
+                </div>
+                <p>
+                    <label>
+                      <input type="checkbox" onclick="showPassword('signup-password');"/>
+                      <span>Mostrar contraseña</span>
+                    </label>
+                  </p>
+                <div class="center" id="wong-register"></div>
+                <button class="btn green darken'2 z'depth'0">Registrarse</button>
+            </form>
+        </div>
+    </div>
+    <!-- Registro -->
+
+    <!-- Iniciar Sesion -->
+    <div id="modal-login" class="modal">
+        <div class="modal-content">
+            <h4>Iniciar Sesion</h4><br />
+            <form id="login-form">
+                <div class="input-field">
+                    <input type="email" id="login-email" required />
+                    <label for="login-email">Correo electronico</label>
+                </div>
+                <div class="input-field">
+                    <input type="password" id="login-password" required />
+                    <label for="login-password">Contraseña</label>
+                </div>
+                <p>
+                    <label>
+                      <input type="checkbox" onclick="showPassword('login-password');"/>
+                      <span>Mostrar contraseña</span>
+                    </label>
+                  </p>
+                <div style="margin-bottom: 10px;">
+                    <a href="resetpassword.html">Has olvidado la contraseña? Da click aqui.</a>
+                </div>
+                <div class="center" id="wong-answer"></div>
+                <button class="btn green darken'2 z'depth'0">Iniciar Sesion</button>
+            </form>
+        </div>
+    </div>
+    <!-- Iniciar Sesion -->
+
+    <!-- Cuenta -->
+    <div id="modal-account" class="modal">
+        <div class="modal-content center-align">
+            <div class="account-details"></div>
+        </div>
+    </div>
+    <!-- Cuenta -->
+
+    <!--TERMINO DE BARRA DE NAVEGACION-->
+
+    <div class="container center">
+        <h1 class="indigo-text text-lighten-1">Microsoft Teams</h1>
+    </div>
+
+    <div class="container cards ">
+        
+    </div>
+
+
+    <!--INICIO DE FOOTER-->
+
+    <footer class="page-footer">
+        <div class="container col s12 m5">
+                <div class="contenedor clearfix">
+                    <div class="footer-informacion">
+                        <a><img class="responsive-img" src="img/logoedu.png"></a>
+                        <p>Instituto Tecnológico de Matamoros</p>
+                        <p>Carr. Lauro Villar K.M. 6.5</p>
+                        <p>8688140952 y 8688140953</p>
+                        <p>C.P. 87490 H. Matamoros, México</p>
+                    </div>
+                    <div class="center logged-in">
+                        <h3>Sugerencias</h3>
+                            <p>Puedes dejarnos tu opinión o alguna petición sobre las aplicaciones publicadas.</p>
+                                <div class="row">
+                                    <form id="form-sugerencias" autocomplete="off">
+                                        <div class=" center input-field col s12 m12 l12">
+                                            <i class="material-icons prefix">insert_comment</i>
+                                            <input id="sugerencias" type="text" class="validate">
+                                            <label for="sugerencias">Comentario</label>
+                                            <button class="material-icons prefix" 
+                                                style=
+                                                "
+                                                cursor: pointer; 
+                                                background:none!important;
+                                                border:none; 
+                                                padding:0!important;
+                                                /*border is optional*/
+                                                border-bottom:1px solid #444;
+                                                "
+                                                >send</button>
+                                        </div>
+                                    </form>
+                                </div>
+                    </div>
+                    <div class="menu center">
+                        <h3>Redes sociales</h3>
+                        <div class="redes-sociales">
+                            <a href="https://www.facebook.com/tecnmcampusmatamoros/" target="_blank"><i class="fab fa-facebook"></i></a>
+                            <a href="https://twitter.com/ITdeMatamoros" target="_blank"><i class="fab fa-twitter"></i></a>
+                            <a href="https://www.youtube.com/channel/UCeuMg5ked6fSjYnY-LDQwqQ" target="_blank"><i class="fab fa-youtube" aria-hidden="true"></i></a>
+                            <a href="https://www.instagram.com/tecnmcampusmatamoros/" target="_blank"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <p class="copyright">
+                    Todos los derechos Reservados. Instituto Tecnológico de Matamoros 2020.
+                </p>
+        </div>
+    </footer>
+
+    <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-firestore.js"></script>
+    <script src="js/firebase.js"></script>
+    
+    <script type="text/javascript" src="js/particles.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
+    
+    <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+    <script src="js/materialize.min.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/vendor/jquery-1.12.0.min.js"></script>
+    <script src="js/sugerencias.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+ 
+</body>
+</html>
