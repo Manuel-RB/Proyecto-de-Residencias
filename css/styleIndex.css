@@ -1,0 +1,24 @@
+.requisitos-modal-btn{
+    font-size: 15px;
+  }
+
+  @media only screen and (max-width: 1140px) {
+    .requisitos-modal-btn{
+      font-size: 12px;
+    }
+  } 
+
+  @media only screen and (max-width: 580px) {
+    .requisitos-modal-btn{
+      font-size: 12px;
+    }
+  } 
+  
+  @media only screen and (max-width: 390px) {
+    .requisitos-modal-btn{
+      font-size: 9px;
+    }
+    .requisitos-modal{
+        font-size: 13px;
+    }
+  } 
